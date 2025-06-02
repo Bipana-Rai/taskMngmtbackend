@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post("/upload", upload.single("profileImage"), async (req, res) => {
-  const imageUrl = `http://localhost:5000/uploads/${req.file.filename}`;
+  const imageUrl = `https://taskmgmntbackend.onrender.com/uploads/${req.file.filename}`;
   await RegisterUserSchema.findByIdAndUpdate(req.body.id, {
     profileImage: imageUrl,
   });
