@@ -13,7 +13,7 @@ const PORT = 5000;
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://task-management-system-gcqv.vercel.app/"
+    "https://task-management-system-gcqv.vercel.app"
   ],
   credentials: true,
   methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
