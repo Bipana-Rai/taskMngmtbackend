@@ -11,8 +11,11 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors({
-  origin: '*', // allow all origins
-  credentials: true, // you can remove if not sending credentials
+  origin: [
+    "http://localhost:3000", // for development
+    "https://task-management-system-j3ou.vercel.app", // for deployed frontend
+  ],
+  credentials: true, // only if you're sending cookies or auth headers
 }));
 
 app.use(express.json());
