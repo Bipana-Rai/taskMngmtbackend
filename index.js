@@ -22,9 +22,11 @@ app.use(cors({
 }));
 
 
+
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
+
 
 mongoose
   .connect("mongodb+srv://bipanarai:Bipana123@cluster0.rnhqnoe.mongodb.net/taskmaze", {
