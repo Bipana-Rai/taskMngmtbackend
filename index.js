@@ -12,11 +12,15 @@ const PORT = 5000;
 
 app.use(cors({
   origin: [
-    "http://localhost:3000", // for development
-    "https://task-management-system-j3ou.vercel.app", // for deployed frontend
+    "http://localhost:3000",
+    "https://task-management-system-j3ou.vercel.app"
   ],
-  credentials: true, // only if you're sending cookies or auth headers
+  credentials: true,
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 200,
 }));
+
 
 app.use(express.json());
 
